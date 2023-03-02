@@ -11,9 +11,15 @@ const products = [];
 Router.get('/add-product', (req, res, next) => {
   // res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
 
-  // For PUG template engine
+  // // For PUG template engine
+  // res.render('add-product', {
+  //   htmlTitle: 'PUG version Add Products',
+  //   path: '/admin/add-product',
+  // });
+
+  // For EJS template engine
   res.render('add-product', {
-    htmlTitle: 'PUG version Add Products',
+    htmlTitle: 'EJS version Add Products',
     path: '/admin/add-product',
   });
 });

@@ -1,0 +1,21 @@
+<%- include('partials/head.ejs') %>
+  <link rel="stylesheet" href="/css/product-form.css">
+  </head>
+
+  <body>
+    <%- include('partials/header.ejs') %>
+
+      <main>
+
+        <form class="form" action="/admin/add-product" method="POST">
+          <div class="form__wrapper">
+            <label for="title" class="form__label">Title</label>
+            <input type="text" name="title" id="title" class="form__input">
+          </div>
+
+          <button type="submit" class="btn">Add Product</button>
+        </form>
+
+      </main>
+
+      <%- include('partials/bottom.ejs') %>

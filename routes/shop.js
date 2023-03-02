@@ -12,11 +12,18 @@ Router.get('/', (req, res, next) => {
   // console.log(adminData.products);
   // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
 
-  // For PUG template engine
   const { products } = adminData;
+  // // For PUG template engine
+  // res.render('shop', {
+  //   products,
+  //   htmlTitle: 'PUG version Shop',
+  //   path: '/',
+  // });
+
+  // For EJS template engine
   res.render('shop', {
     products,
-    htmlTitle: 'PUG version Shop',
+    htmlTitle: 'EJS version Shop',
     path: '/',
   });
 });
