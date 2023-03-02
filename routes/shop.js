@@ -14,7 +14,11 @@ Router.get('/', (req, res, next) => {
 
   // For PUG template engine
   const { products } = adminData;
-  res.render('shop', { products, htmlTitle: 'PUG version Shop' });
+  res.render('shop', {
+    products,
+    htmlTitle: 'PUG version Shop',
+    path: '/',
+  });
 });
 
 module.exports = Router;

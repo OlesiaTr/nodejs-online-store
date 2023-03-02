@@ -1,5 +1,6 @@
 .card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  text-align: center;
 }
 
 .card__header,
@@ -13,7 +14,6 @@
 
 .products__title {
   font-size: 1.2rem;
-  text-align: center;
 }
 
 .products__price {
@@ -23,7 +23,6 @@
 }
 
 .products__description {
-  text-align: center;
 }
 
 .products__list {
@@ -35,6 +34,7 @@
 }
 
 .card__actions {
+  padding: 1rem;
 }
 
 .card__btn {

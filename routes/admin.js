@@ -12,7 +12,10 @@ Router.get('/add-product', (req, res, next) => {
   // res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
 
   // For PUG template engine
-  res.render('add-product', { htmlTitle: 'PUG version Add Products' });
+  res.render('add-product', {
+    htmlTitle: 'PUG version Add Products',
+    path: '/admin/add-product',
+  });
 });
 
 Router.post('/add-product', (req, res, next) => {

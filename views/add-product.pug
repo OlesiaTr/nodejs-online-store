@@ -1,24 +1,13 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title #{htmlTitle}
-    link(rel="stylesheet", href="/css/main.css")
-    link(rel="stylesheet", href="/css/header.css")
+extends layouts/main-layout.pug
+
+block styles
     link(rel="stylesheet", href="/css/product-form.css")
-  body
-    header.header
-      nav.nav
-        ul.nav__list
-          li.nav__item
-            a.link(href="/") Shop
-          li.nav__item
-            a.link.active(href="/admin/add-product") Add Product
+
+block content
     main
       form.form(action="/admin/add-product" method="POST")
         .form__wrapper
           label.form__label(for="title") Title
           input.form__input(type="text" name="title" id="title")
         button.btn(type="submit") Add Product
+
