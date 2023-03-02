@@ -18,6 +18,10 @@
     "url": "https://github.com/OlesiaTr/nodejs-online-store/issues"
   },
   "homepage": "https://github.com/OlesiaTr/nodejs-online-store#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  },
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -25,9 +29,5 @@
     "eslint-plugin-import": "^2.25.2",
     "nodemon": "^2.0.20",
     "prettier": "2.4.1"
-  },
-  "dependencies": {
-    "body-parser": "^1.20.2",
-    "express": "^4.18.2"
   }
 }
