@@ -1,8 +1,42 @@
-.products {
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.card__header,
+.card__content {
+  padding: 1rem;
+}
+
+.card__image {
+  width: 100%;
 }
 
 .products__title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.products__price {
+  text-align: center;
+  color: #4d4d4d;
+  margin-bottom: 0.5rem;
+}
+
+.products__description {
+  text-align: center;
 }
 
 .products__list {
+}
+
+.products__item {
+  width: 20rem;
+  max-width: 95%;
+}
+
+.card__actions {
+}
+
+.card__btn {
+  margin: 0 0.25rem;
 }

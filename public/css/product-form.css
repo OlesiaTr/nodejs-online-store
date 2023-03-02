@@ -19,11 +19,3 @@
   font: inherit;
   border-radius: 2px;
 }
-
-.form__btn {
-  font: inherit;
-  border: 1px solid rgb(43, 58, 85);
-  color: rgb(43, 58, 85);
-  background: rgb(229, 229, 229);
-  border-radius: 3px;
-}

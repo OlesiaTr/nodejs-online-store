@@ -27,7 +27,7 @@ section {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -60,4 +60,25 @@ button {
 
 a {
   text-decoration: none;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.btn {
+  font: inherit;
+  border: 1px solid rgb(43, 58, 85);
+  color: rgb(43, 58, 85);
+  background: rgb(229, 229, 229);
+  border-radius: 3px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgb(43, 58, 85);
+  color: rgb(229, 229, 229);
 }
