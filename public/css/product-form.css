@@ -9,13 +9,21 @@
 }
 
 .form__label,
-.form__input {
+.form__input,
+.form__textarea {
   display: block;
   width: 100%;
+  margin-bottom: 0.25rem;
 }
 
-.form__input {
-  border: 1px solid rgb(251, 109, 58);
+.form__input,
+.form__textarea {
+  border: 1px solid rgb(43, 58, 85);
   font: inherit;
   border-radius: 2px;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  outline-color: rgb(251, 109, 58);
 }
