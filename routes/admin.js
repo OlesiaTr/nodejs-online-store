@@ -1,12 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 
-const productsController = require('../controllers/products');
+const adminController = require('../controllers/admin');
 
 const Router = express.Router();
 
-Router.get('/add-product', productsController.getAddProduct);
+Router.get('/add-product', adminController.getAddProduct);
 
-Router.post('/add-product', productsController.postAddProduct);
+Router.get('/products', adminController.getProducts);
+
+Router.post('/add-product', adminController.postAddProduct);
 
 module.exports = Router;

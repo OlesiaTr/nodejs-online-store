@@ -1,10 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 
-const productsController = require('../controllers/products');
+const shopController = require('../controllers/shop');
 
 const Router = express.Router();
 
-Router.get('/', productsController.getProducts);
+Router.get('/', shopController.getIndex);
+
+Router.get('/products', shopController.getProductsList);
+
+Router.get('/cart', shopController.getCart);
+
+Router.get('/checkout', shopController.getCheckout);
 
 module.exports = Router;
