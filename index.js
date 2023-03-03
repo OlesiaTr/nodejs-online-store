@@ -4,35 +4,22 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const errorController = require('./controllers/errors');
+
 const app = express();
 
-// For PUG template engine
-// app.set('view engine', 'pug');
-
-// For EJS template engine
 app.set('view engine', 'ejs');
+app.set('views', 'views');
 
-app.set('views', 'views'); // In case we named our 'views' folder where we store html bits differentily
-
-const adminData = require('./routes/admin');
+const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/admin', adminData.Router);
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
-app.use((req, res, next) => {
-  // res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
-
-  // // For PUG template engine
-  // res.status(404).render('404', { htmlTitle: 'PUG version of Page Not Found' });
-
-  // For EJS template engine
-  res
-    .status(404)
-    .render('404', { htmlTitle: 'EJS version of Page Not Found', path: false });
-});
+app.use(errorController.get404);
 
 app.listen(3000);
